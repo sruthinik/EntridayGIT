@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Signin Page{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+<h1>Enter your credentials and login</h1>
+
+<form action="/signin/" method="post">
+    {% csrf_token %}
+    <label for="">Enter your Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter your Username" Required>
+    <br>
+
+     <label for="">Enter your Password</label>
+    <input type="text" id="password1" name="password1" placeholder="Enter your Password" Required>
+    <br>
+    <button type="submit">Login</button>
+
+</form>
+</body>
+</html>
+
+{% endblock %}
